@@ -28,13 +28,15 @@ header {
     border-right: 8px solid white;
     float: left
 }
-.ln275{
+
+.ln275 {
     display: inline-block;
     float: right;
     height: 150px;
     width: 25%;
-    border-left: 8px solid white 
+    border-left: 8px solid white
 }
+
 .ln3 {
     display: block;
     height: 150px;
