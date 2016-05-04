@@ -1,0 +1,12 @@
+h1 {
+ font-family: "Georgia";
+    align-content: center;
+    font-size: 7em;
+}
+p{ 
+    border-bottom-width: thin blue
+    display: inline-block; width: 30%
+}
+img { 
+display: block
+}

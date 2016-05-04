@@ -1,0 +1,30 @@
+img {
+    display: inline-block;
+}
+
+ul {
+    float: right;
+}
+h1 {
+    display: block;
+    align-content: center
+}
+
+li {
+    display: block 15;
+    border: 2px solid green;
+    padding: 10px;
+    background-color: blueviolet;
+    margin: 1px;
+    vertical-align: middle;
+    width: 75px;
+}
+
+footer {
+    display: block;
+    position: bottom;
+}
+
+main {
+    display: inline-block;
+}

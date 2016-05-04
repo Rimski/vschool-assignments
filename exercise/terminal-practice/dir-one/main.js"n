@@ -1,0 +1,2 @@
+<scripttype script,javascript>
+alert() {"Hello World"};
