@@ -12,7 +12,7 @@ var largest = function (x, y, z) {
 }
 
 function evenOdd(x) {
-    if (x % 2)
+    if (x % 2 ===)
         return "even";
     else return "odd";
 }

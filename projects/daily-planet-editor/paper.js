@@ -11,7 +11,7 @@ function Who_Wins(is_there_kryptonite, enemyName) {
 
 for (var i = 0; i < Enemies.length; i++) {
 var is_there_kryptonite =  
-    (i % 2 === 0) //? add function
+    (i % 2 === 0) 
     console.log(Who_Wins(is_there_kryptonite, Enemies[i]));
 }
 
