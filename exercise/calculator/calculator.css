@@ -1,0 +1,11 @@
+#paragraf {
+    height: 30px;
+    width: 200px;
+    margin: 30px;
+}
+
+p {
+    border: solid;
+    font-size: 20px;
+    padding: 6px;
+}
