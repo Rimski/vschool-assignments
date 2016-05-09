@@ -1,0 +1,20 @@
+div {
+    border: 8px solid white;
+    box-sizing: border-box;
+    height: 150px;
+}
+#top {
+    background-color: #F5C6D6;
+}
+#first {
+    background-color: #EE2E84;
+}
+#second {
+    background-color: #85CFD8;
+}
+#bottom {
+    background-color: #8DC63F;
+}
+#bottomOrange {
+    background-color: #E76E34;
+}

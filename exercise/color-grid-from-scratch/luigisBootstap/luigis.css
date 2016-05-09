@@ -1,0 +1,57 @@
+@font-face {
+    font-family: mario;
+    src: url("SuperMario256.ttf");
+}
+
+* {
+    font-family: mario;
+    box-sizing: border-box;
+    color: red;
+    text-align: center;
+}
+h1 {
+    float:left;
+    margin-left: 30px;
+}
+
+#top {
+    background-color: #D4D730;
+}
+
+#first {
+    background-color: red;
+}
+
+#second {
+    background-color: white;
+    display: inline-block;
+    margin: 0 auto;
+    width: 30%;
+    float: none;
+}
+
+#bottom {
+    background-color: #D4D730;
+}
+
+img {
+    margin: 0 auto;
+    padding: 30px;
+    display: block;
+}
+
+#last {
+    max-height: 100px;
+    float: right;
+    padding: 4px;
+}
+
+@media (max-width: 650px) {
+    #second {
+        width: 100%;
+    }
+    p{
+        font-family: "helvitica";
+        font-weight: bold;
+    }
+}
