@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Travel form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <main>
+        <form name="travelForm" action="">
+            <div>
+                <h1 class="text-center">Travel form</h1>
+                <input class="form-control" type="text" placeholder="First Name">
+            </div>
+
+            <div>
+                <input class="form-control" type="text" placeholder="Last Name">
+            </div>
+
+            <div>
+                <input class="form-control" type="number" placeholder="Age">
+            </div>
+
+            <div>
+                <input id="radio" type="radio" name="gender" value="Male"> Male
+                <br>
+                <input id="radio" type="radio" name="gender" value="Female"> Female
+                <br>
+            </div>
+
+            <div class="text-center">
+                <h2> Where do you want to go?</h2>
+
+                <select class="form-control" name="Destination" id="Destination">
+                    <option value="Alabama">Alabama</option>
+                    <option value="Tuscany">Tuscany</option>
+                    <option value="New Zeland">New Zeland</option>
+                </select>
+            </div>
+
+            <div class="text-center">
+                <h4>Diet Restrictions</h4>
+
+
+                <select class="form-control" name="diet" id="diet">
+                    <option value="unrestricted"> No Restrictions</option>
+                    <option value="anAlmond">Paris Hilton Diet</option>
+                    <option value="glutentFree">Glutent Free</option>
+                    <option value="noLactose">Lactose Free</option>
+                </select>
+            </div>
+
+        </form>
+        <button class="sucsess">submit</button>
+    </main>
+</body>
+
+</html>

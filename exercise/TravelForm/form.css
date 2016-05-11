@@ -1,0 +1,25 @@
+* {
+    display: block;
+}
+#radio {
+    display: inline-block;
+}
+main {
+    margin: 50px;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 25px;
+    background-color: #fff;
+}
+div {
+    padding: 20px;
+}
+body {
+    background-color: aliceblue;
+}
+button {
+    border-radius: 6px;
+    background-color: aliceblue;
+    margin: 10px;
+    border: 2px outset blue;
+}

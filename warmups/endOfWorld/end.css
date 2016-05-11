@@ -1,0 +1,9 @@
+p {
+    display: inline-block;
+}
+div {
+    border: 2px solid black;
+    display: inline;
+    padding: 4px;
+    border-radius: 7px;
+}
