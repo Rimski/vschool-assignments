@@ -48,19 +48,19 @@ console.log("hellow");
 var Player = readline.question("whats your name?  ");
 
 
-var walk = readline.question("enter w to walk. "\n"enter print to veiw stats. ");
+var walk = readline.question("enter w to walk. enter print to veiw stats. ");
 
 if (walk === "w") {
     enemyPicker();
     if (enemyPicker === true) {
-    console.log(watch out )
-    var battle = readline.question("Enter r for run away and "\n" and f for stay and fight. ")
+    console.log("watch out" )
+    var battle = readline.question("Enter r for run away and  and f for stay and fight. ")
     }
     
         //randomly pick new enemy
 } else if (walk === "print") {
     console.log(print());
-} else console.log("enter w")
+} else {console.log("enter w");}
 while (Player.hp > 0) {
     walking();
 } else console.log(You died to death.)
