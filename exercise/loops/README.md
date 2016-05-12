@@ -1,0 +1,2 @@
+this excersize turnd in to a project its not done yet, but it was showing array/ string manipulation
+i realized you could make a hang man game with a little more work, but i havent had time to comeback to it yet.

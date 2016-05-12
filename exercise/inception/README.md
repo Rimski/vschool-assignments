@@ -1,0 +1,1 @@
+this project showd me that you can nest a for loop in a for loop and someof the diffrent things you can do with that.

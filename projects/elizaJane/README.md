@@ -1,0 +1,1 @@
+This project i designed a basic static website.
