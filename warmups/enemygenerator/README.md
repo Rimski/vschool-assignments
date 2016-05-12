@@ -1,0 +1,1 @@
+This warm up helped me understand constructor functions/class creators

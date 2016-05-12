@@ -8,11 +8,17 @@ h1 {
     position: relative;
     top: 50px;
     z-index: 0;
+    display: block;
 }
 
 container {
-    align-content: center;
+    align-content: flex-end;
     display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+header {
+    height: 100px;
 }
 
 nav {
@@ -22,13 +28,18 @@ nav {
     width: 100%;
     z-index: 1;
     padding: 10px;
+    border-radius: 10px;
 }
 
 body {
     background-color: #93E2F7;
 }
 
-li {
+.foot {
+    text-align: center;
+}
+
+.nav {
     display: inline-block;
     box-sizing: border-box;
     margin-left: 20px;
@@ -42,9 +53,11 @@ img {
     max-width: 100%;
     margin: 0 auto;
 }
+
 a {
     color: #B25700;
 }
+
 form {
     border: 2px #519EB2 outset;
     background-color: #fff;
@@ -53,8 +66,80 @@ form {
     position: relative;
     top: 20px;
 }
-#form {
-    display: inline-block;
+
+.myForm {
+    display: block;
     max-height: 100%;
     max-width: 100%;
+    margin: 0px auto;
+    padding: 30px;
+    text-align: center;
 }
+
+input {
+    width: 80%;
+    border-radius: 5px
+}
+
+textarea {
+    width: 80%;
+    border-radius: 5px
+}
+
+.stich {
+    max-width: 100px;
+    margin: 10px;
+    display: inline;
+}
+
+.radio {
+    display: block;
+    text-align: left;
+    position: relative;
+    left: 100px;
+}
+
+.myRadio {
+    background-color: #93E2F7;
+    border-radius: 25px;
+}
+
+.move {
+    position: relative;
+    top: 50px;
+}
+
+footer {
+    display: block;
+    height: 150px;
+    position: relative;
+    bottom: 0;
+    z-index: 1;
+    margin: 20px;
+    border: 1px inset #1990FF;
+    border-radius: 25px;
+}
+
+.myRow {
+    display: block;
+    box-sizing: border-box;
+    display: table;
+    content: " ";
+}
+@media screen and (max-width: 500px) {
+    .nav {
+        font-size-adjust: auto;
+        
+        margin-right: 5px;
+        margin-left: 10px;
+    }
+    footer {
+        height: 250px;
+    }
+    .radio {
+        left: 0;
+    }
+    
+    
+}
+    

@@ -12,21 +12,50 @@
 <body>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="order.html">Order</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li class="nav"><a href="index.html">Home</a></li>
+            <li class="nav"><a href="order.html">Order</a></li>
+            <li class="nav"><a href="gallery.html">Gallery</a></li>
+            <li class="nav"><a href="about.html">About Us</a></li>
         </ul>
     </nav>
     <form title="orderForm" action="">
         <container>
-            <div class="form-control">
-                <label for="width"> Blanket: </label>
-                <input type="number" name="width">
+            <div class="myForm">
+                <h1>Qoute Fourm</h1></div>
+            <div class="myForm">
+                <label for="width"> Width: </label>
+                <input class="myClass" placeholder="In Feet" type="number" name="width">
             </div>
-            <div class="form">
+            <div class="myForm">
+                <label for="height"> height: </label>
+                <input class="myClass" placeholder="In Feet" type="number" name="width">
+            </div>
+            <div class="myForm myRadio">
+                <h2>Pick a Stitch</h2>
+                <div class="radio">
+                    <input type="radio" name="pattern"> <img class="stich" src="http://karensquiltedcreations.com/images/Web_Page_Images_004.jpg" alt="">
+                </div>
+                <div class="radio">
+                    <input type="radio" name="pattern"> <img class="stich" src="https://s-media-cache-ak0.pinimg.com/236x/ce/ec/f9/ceecf97126041f6fcf4347dd0b4c2b5d.jpg" alt="">
+                </div>
+                <div class="radio">
+                    <input type="radio" name="pattern"> <img class="stich" src="https://s-media-cache-ak0.pinimg.com/236x/ae/8d/de/ae8ddeab0f19e924d02f999d737e80e3.jpg" alt="">
+                </div>
+                <div class="radio">
+                    <input type="radio" name="pattern"> <img class="stich" src="http://www.sewthankful.com/media/continLineQuiltingPatterns/UrbanElementzPatriciaRitter/2011_Additions/Animal_Crackers.jpg" alt="">
+                </div>
+            </div>
+            <div class="myForm">
                 <label for="special">Special Requests</label>
-                <textarea class="form-control" rows="3" name="special"></textarea>
+                <textarea rows="3" placeholder="describe special requests her I.E. (Could you please stich airoplanes?)" name="special"></textarea>
+            </div>
+            <div class="myForm">
+                <label for="name">Name: </label>
+                <input class="myClass" name="name" type="text" placeholder="Full Name here">
+            </div>
+            <div class="myForm">
+                <label for="email">Email: </label>
+                <input class="myClass" name="email" type="text" placeholder="C.Walken@nowhere.com">
             </div>
         </container>
     </form>
