@@ -1,2 +1,3 @@
 .DS_Store
-.node-moduals
+node-moduals/
+bower_components/
