@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>High Score Haven</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Input</a></li>
+        <li>
+            <a href="table.html">High Scores</a></li>
+    </ul>
+</nav>
+
+<body>
+    <form id="form" action="">
+        <container>
+            <div>
+                <label for="name">Name:</label>
+                <input id="name" type="text" name="name" value="">
+            </div>
+            <div>
+                <label for="game">Game:</label>
+                <input id="game" type="text" name="game" value="">
+            </div>
+            <div>
+                <label for="date">Date</label>
+                <input id="date" type="date" name="date" value="">
+            </div>
+            <div>
+                <label for="score">High Score:</label>
+                <input id="score" type="number" name="score" value="0">
+            </div>
+            <div>
+                <h3>Include R.A.G.S. :</h3>
+                <div>
+                    <input id="trash" type="checkbox" name="trash" value="true" checked="true">
+                </div>
+                <div>
+                    <button type="button" id="submit">Submit</button>
+                </div>
+            </div>
+        </container>
+    </form>
+    <container>
+        <table id="highScore" align="center" class="highScore">
+            <caption>High Score</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Game</th>
+                    <th>Date</th>
+                    <th>Score</th>
+                    <th>R.A.G.S.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+
+                </tr>
+            </tbody>
+        </table>
+    </container>
+    <!--    <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>-->
+    <script src="main.js"></script>
+</body>
+
+</html>

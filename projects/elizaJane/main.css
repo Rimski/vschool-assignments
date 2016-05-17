@@ -119,6 +119,9 @@ footer {
     border: 1px inset #1990FF;
     border-radius: 25px;
 }
+.rolling {
+    width: 75%;
+}
 
 .myRow {
     display: block;
@@ -136,8 +139,10 @@ footer {
     footer {
         height: 250px;
     }
+/*
     .radio {
         left: 0;
+*/
     }
     
     

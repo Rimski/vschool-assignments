@@ -1,0 +1,1 @@
+this project helped me understand programing princaples like callbacks and set intervals/timeouts.

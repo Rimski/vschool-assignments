@@ -7,4 +7,10 @@ div {
     box-sizing: border-box;
     border-radius: 25px;
     background-color: #fff;
+    transition: background-color 2s ease-out, border-radius 6s ease-in, 
+        width 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+}
+div:hover {
+    border-radius: 75%;
+    width: 250px;
 }

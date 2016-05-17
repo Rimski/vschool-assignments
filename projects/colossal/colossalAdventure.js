@@ -10,7 +10,7 @@ function WildEnemy(name) {
     this.name = name;
     this.hp = Math.floor((Math.random() * 35) + 1);
 }
-var vagrents = ["Walken", "Clem", "Christopher", "Hatcher"];
+var vagrents = ["Walken", "Clem", "Christopher", "Hatcher", "Chrysanthemum", "Tymber_The_Medical_Hobo"];
 
 var Christopher = new WildEnemy(vagrents[2]);
 
@@ -19,9 +19,17 @@ var Clem = new WildEnemy(vagrents[1]);
 var Walken = new WildEnemy(vagrents[0]);
 
 var Hatcher = new WildEnemy(vagrents[3]);
-// attack
+
+var Chrysanthemum = new WildEnemy(vagrents[4]);
+
+var TymberTheMedicalHobo = new WildEnemy(vagrents[5])
+    // attack
 var randomAttack = (Math.floor(Math.random() * 25) + 1);
 
+function wiffelBall() {
+    newPlayer.hp = (newPlayer.hp - randomAttack);
+    console.log("you're helth went down due to severe injury from a wiffel ball bat.");
+}
 
 function running(ememy) {
     console.log("I'll take option C")
@@ -43,6 +51,9 @@ function print() {
     }
 }
 
+function heal() {
+    newPlayer.hp += Math.floor((Math.random() * 18) + 5);
+}
 
 
 function enemyPicker() {
@@ -52,7 +63,7 @@ function enemyPicker() {
         console.log("it's " + "Christopher");
         var fight = readline.question("do you want to run or fight?");
         if (fight === "fight") {
-            battle(Christopher, newPlayer, "A watch and a long story. ");
+            battle(Christopher, newPlayer, ("A watch and a long story. "));
         } else {
             running(Christopher);
         }
@@ -62,7 +73,7 @@ function enemyPicker() {
         console.log("it's " + "Clem");
         var fight = readline.question("do you want to run or fight?");
         if (fight === "fight") {
-            battle(Clem, newPlayer, " The Concept of the toothfairy, ");
+            battle(Clem, newPlayer, (" The Concept of the toothfairy, "));
         } else {
             running(Clem);
         }
@@ -89,6 +100,34 @@ function enemyPicker() {
         } else {
             running(Hatcher);
         }
+
+    } else if (maths === 5) {
+        console.log(" oh no's a vagrent");
+        console.log("it's " + "Chrysanthemum");
+        var fight = readline.question("press 'a' fight or b to run");
+        if (fight === "a") {
+            battle(Chrysanthemum, newPlayer, "a shiney flowerpetal ");
+        } else {
+            running(Chrysanthemum);
+        }
+    } else if (maths === 6) {
+        console.log(" oh no's a vagrent");
+        console.log("it's " + "TymberTheMedicalHobo");
+        console.log("wait im not vagrent")
+        var what = readline.question("I'm a shady doctor who operates on \n on the forest floor. do you want me to operate on you? y for yes n for no.  ")
+        if (what === "y") {
+            var fight = readline.question("just take a second and sign this waiver ");
+            if (fight === "no" || fight === "you're crazy") {
+                console.log("WHOOP WHOOP WHOOP as the crazy hobo runs off ");
+                console.log("You wake up dizzy on the floor and you're coat and lunch are gone... or did you even have a coat?");
+                heal();
+                walking();
+            } else {
+                console.log("Did you see my sandwich; i was..... never mind i have to go to the bathroom. \n you can leave now")
+                heal();
+                walking();
+            }
+        }
     } else {
         console.log("uneventfull stroll")
         walking();
@@ -97,7 +136,7 @@ function enemyPicker() {
 }
 
 //game start
-console.log("Welcome to Camio\na dejavo type game\nall characters are completly fictional and\nand have no reation to Christoper walken");
+console.log("Welcome to Camio\na dejavo type game\nall characters are completly fictional and\nand have no relation to Christoper walken");
 
 var givName = readline.question("Little man boy whats your name?  ");
 var newPlayer = new Player(givName);
@@ -110,17 +149,23 @@ function battle(enemy, player, object) {
 
     function continueFight(object) {
         fightEnemy = (fightEnemy - randomAttack);
-        if (fightEnemy > 0) {
 
+         if (fightEnemy = 7 && fightEnemy > 3 ) {
+            console.log("he hit you with a wiffel ball bat.");
+            wiffelBall();
+            newPlayer.inventory += "Wiffel Ball Bat ";
+        } else
+        if (fightEnemy > 0) {
             console.log("You hurt " + enemy.name + " his health is at " + fightEnemy);
             newPlayer.hp = (newPlayer.hp -= randomAttack);
-            console.log(enemy.name + " strickes back; your health is now " + player.hp);
-        } else if (fightEnemy <= 0) {
-            console.log("that was close");
+            console.log(enemy.name + " strikes back; your health is now " + player.hp);
+            newPlayer.inventory += [object];
+        } else
+        if (fightEnemy <= 0) {
+            console.log("You killed " + enemy.name + "whats wrong with you?!?!");
             walking();
+            newPlayer += object;
         } else console.log("why??!")
-
-
 
 
         while (!fightEnemy < 0 || !player.hp < 0) {
@@ -128,10 +173,12 @@ function battle(enemy, player, object) {
         }
     }
     if (newPlayer.hp > 0) {
+        console.log("you survived");
         newPlayer.inventory += [object];
         walking();
     } else {
-        (newPlayer.hp = 0)
+        (newPlayer.hp = 0);
+       
     }
 
 }
@@ -149,9 +196,16 @@ function walking() {
     } else if (walk === "print") {
         print();
     } else if (walk === "q") {
-        console.log("We'll just call your " + newPlayer.hp + " healt and " + newPlayer.inventory.length + " artifacts tax deductable.");
+        console.log("We'll just call your " + newPlayer.hp + " health and " + newPlayer.inventory.length + " artifacts tax deductable.");
         newPlayer.hp = 0;
-    } else {
+    } else if(walk === "dog") { 
+        console.log("you're dog wants to come with you");
+        var dog = readline.question("a for yes n for no");
+        if (dog === "a" || dog === "y") {
+            newPlayer.inventory += "You're puppy!!!";
+            walking();
+        } else console.log("you're lame.")
+    } else{
         console.log("enter w");
     }
 }
