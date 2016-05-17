@@ -1,3 +1,9 @@
 .DS_Store
+<<<<<<< HEAD
 node_moduals/
 bower_components/
+=======
+node-moduals/
+bower_components/
+slick-1.6.0/
+>>>>>>> 18bce388573136ed88d6d7d2631c8e6a7b29af1c
