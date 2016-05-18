@@ -13,32 +13,35 @@ function onHit(party) {
         penguins.population -= (Math.floor(Math.random() * 1000000) + 1);
         console.log("nuke hits " + penguins.name);
         console.log("Penguin population " + penguins.population);
-        sendNuke(penguins, onHit, onMiss);
+        
         if (penguins.population > 0) {
-            console.log(penguins.name + " sending nuke")
-        } else console.log(penguins.name + " send one last Nuke")
-    } else {
+            sendNuke(penguins, onHit, onMiss);
+            console.log(penguins.name + " sending nuke");
+        } else console.log(penguins.name + " send one last Nuke");
+    } else if (party === penguins) {
         comunists.population -= (Math.floor(Math.random() * 1000000) + 1);
         console.log(" nuke hits " + comunists.name);
         console.log("Comie population " + comunists.population);
         sendNuke(comunists, onHit, onMiss);
         if (comunists.population > 0) {
-            console.log(comunists.name + " sending nuke")
+            console.log(comunists.name + " sending nuke");
         }
     }
-}
+};
 
 function onMiss(party) {
     if (party === penguins) {
         console.log(penguins.name + "'s nuke missed");
+        console.log(comunists.name + " sending nuke");
         sendNuke(comunists, onHit, onMiss);
-    } else {
+    } else
         console.log(comunists.name + "'s nuke missed");
-        sendNuke(penguins, onHit, onMiss);
+    console.log(penguins.name + " sending nuke");
+    sendNuke(penguins, onHit, onMiss);
 
-    }
 
-}
+
+};
 
 function sendNuke(party, onHit, onMiss) {
     //    console.log(party.name + " sending nuke");
@@ -51,16 +54,16 @@ function sendNuke(party, onHit, onMiss) {
             if (maths === 2) {
                 onHit(party);
 
-            } else {
+            } else if (maths === 1) {
                 onMiss(party);
 
             }
 
         }
-    }, 1500)
+    }, 1)
 
 
-}
+};
 
 
 function start() {
