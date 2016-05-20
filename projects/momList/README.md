@@ -1,0 +1,1 @@
+this project was to practice adding html elements and removeing them through java script.
