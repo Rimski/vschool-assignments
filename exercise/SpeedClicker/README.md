@@ -1,0 +1,1 @@
+this exersize is to practice useing webstorage.
