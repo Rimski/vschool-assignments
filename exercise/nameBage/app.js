@@ -1,8 +1,9 @@
 var app = angular.module("mainApp", []);
 
 app.controller("MainController", ["$scope", function($scope){
-    var people = [];
+    $scope.people = [];
     $scope.addPeople = function(person){
-        people.push(person)
+        $scope.people.push(person);
+        $scope.person = {};
     }
 }]);

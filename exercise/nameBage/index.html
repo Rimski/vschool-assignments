@@ -5,44 +5,81 @@
     <meta charset="UTF-8">
     <title>Name Bage</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
 </head>
 
-<body>
-    <section class="container" ng-controller="MainController">
+<body ng-controller="MainController">
+    <section class="container imput">
         <div class="col-xs-12 col-md-6">
             <div class="container-fluid">
-                <div>
-                    <input type="text" ng-model="person.firstname" placeholder="First Name">
+                <div class="col-xs-12 imput">
+                    <input type="text" class="form-control" ng-model="person.firstname" placeholder="First Name" required>
                 </div>
-                <div class="col-xs-12">
-                    <input type="email" ng-model="person.email" placeholder="Email">
+                <div class="col-xs-12 imput">
+                    <input type="text" class="form-control" ng-model="person.mail" placeholder="Email" required>
                 </div>
-                <div class="col-xs-12">
-                    <input type="tel" ng-model="person.phone" placeholder="First Name">
+                <div class="col-xs-12 imput">
+                    <input type="tel" class="form-control" ng-model="person.phone" placeholder="TelePhone Number" required>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 col-md-6">
-            <div class="container">
-                <div class="col-xs-12">
-                    <input type="text" ng-model="lastname" placeholder="Last Name">
+            <div class="container-fluid">
+                <div class="col-xs-12 imput">
+                    <input type="text" class="form-control" ng-model="person.lastname" placeholder="Last Name" required>
                 </div>
-                <div class="col-xs-12">
-                    <input type="date" ng-model="person.birthPlace" placeholder="Place of Birth">
+                <div class="col-xs-12 imput">
+                    <input type="date" class="form-control" ng-model="person.birthPlace" placeholder="Place of Birth" required>
                 </div>
-                <div class="col-xs-12">
-                    <input type="text" ng-model="person.favriteFood" placeholder="Favorite Food">
+                <div class="col-xs-12 imput">
+                    <input type="text" class="form-control" ng-model="person.favriteFood" placeholder="Favorite Food" required>
                 </div>
             </div>
         </div>
         <div class="col-xs-12 text-center">
-            <textarea cols="30" rows="5" placeholder="What makes you you?"></textarea>
+            <div class="container-fluid">
+                <div class="col-xs-12">
+                    <textarea cols="90" class="form-control" rows="5" placeholder="What makes you you?" ng-model="person.description"></textarea>
+                </div>
+            </div>
         </div>
-        <div class="col-xs-12 text-center">
+        <div class="col-xs-12 text-center imput">
             <button ng-click="addPeople(person)">Submit</button>
         </div>
     </section>
-    <section ng-repeat="person in peopole"></section>
+    <section class="output" ng-repeat="person in people">
+        <div class="container output">
+            <div class="row top">
+                <h1>Hello</h1>
+                <p>My name is {{ person.firstname }} {{ person.lastname }}</p>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h2>Name: {{ person.firstname }} {{ person.lastname }}</h2>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <h2>Phone: {{ person.phone }}</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h2>Place of birth: {{ person.birthPlace }}</h2></div>
+                    <div class="col-xs-12 col-md-6">
+                        <h2>Favorite food: {{ person.favriteFood }}</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h2>Email: {{ person.mail }}</h2></div>
+                </div>
+                <div class="row">
+                    <div class="col-xm-12 text-center">
+                        <p>{{ person.description }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
     <script src="app.js"></script>
 </body>

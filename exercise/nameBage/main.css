@@ -1,0 +1,32 @@
+section.imput {
+    border: 1px solid #000;
+    border-radius: 25px;
+    padding: 30px
+}
+div.imput {
+    padding: 20px;
+}
+button {
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
+    font-size: 30px;
+}
+div.top {
+    background-color: coral;
+    border: 10px solid coral;
+    border-top-right-radius: 19px;
+    border-top-left-radius: 19px;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+section {
+    margin: 50px;
+}
+div.output {
+    border: 3px solid coral;
+    border-radius: 25px;
+    padding-bottom: 20px;
+    background-color: aliceblue;
+}
