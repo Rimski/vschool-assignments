@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ng Model</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="well row" ng-controller="controllerOne">
+        <input type="text" ng-model="valueOne">
+        <h1>{{ valueOne }}</h1>
+    </div>
+    <div class="well row" ng-controller="controllerTwo">
+        <input type="text" ng-model="valueTwo">
+        <h1>{{ valueTwo}}</h1>
+    </div>
+    <div class="well row" ng-controller="controllerThree">
+        <input type="text" ng-model="valueThree">
+        <h1>{{ valueThree }}</h1>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

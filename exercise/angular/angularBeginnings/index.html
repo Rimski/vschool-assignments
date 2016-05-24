@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myPractice">
+<html lang="en" ng-app="mainApp">
 
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
 
-<body ng-controller="mainController">
-<label>Crystal Magic: </label><input type="text" ng-model="main.text">
+<body ng-controller="myController">
+<label>Crystal Magic: </label>
+ <input type="text" ng-model="myValue">
   
    <div>
-       <h1>{{ main.text }}</h1>
+       <h1>{{ myValue }}</h1>
    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>

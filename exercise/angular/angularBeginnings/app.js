@@ -1,8 +1,5 @@
-var app = angular.module("myPractice", []);
+var app = angular.module("mainApp", []);
 
-app.controller("mainController", ["$scope", function ($scope) {
-    $scope.main = {
-            text: "text",
-    };
-
+app.controller("myController", ["$scope", function ($scope) {
+    $scope.myValue;
 }]);
