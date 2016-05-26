@@ -1,0 +1,11 @@
+section {
+    width: 80%;
+    text-align: center;
+}
+body {
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQtYbMaUG-mujwFcwe6zrpY4F37LqLPrTUx18YsLmYPQ0kbKp3MFQ");
+    background-size: cover;
+}
+h2 {
+    color: yellow;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TranslationApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Yoda Speak</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="translationController">
+       <section>
+        <div>
+            <h1></h1>
+            <input type="text" ng-model="sentance.info">
+            <button ng-click="translate(sentance)">Translate you want?</button>
+        </div>
+        <div>
+            <h2>{{ response }}</h2></div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="Services/translation.js"></script>
+</body>
+
+</html>

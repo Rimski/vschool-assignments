@@ -1,0 +1,36 @@
+section {
+    align-content: center;
+    text-align: center;
+    width: auto;
+    display: block;
+}
+
+div.hit {
+    position: static;
+    margin: 10px;
+/*
+    height: 400px;
+    width: 350px;
+*/
+    text-align: center;
+    display: inline-block;
+    background-size: cover;
+}
+
+img {
+    height: 400px;
+    width: 300px;
+    position: relative;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    
+}
+img.takenCareOf {
+    -webkit-filter: invert(100%);
+}
+
+h1 {
+    padding: 10px;
+    margin: 0px;
+    background-color: red
+}

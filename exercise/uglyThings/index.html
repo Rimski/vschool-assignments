@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="uglyApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ugly Stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="uglyController">
+    <div class="input container-fluid">
+        <div class="col-xs-12 col-md-4">
+            <label>Name: </label>
+            <input class="form-control" type="text" ng-model="object.name">
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <label>Url: </label>
+            <input type="text" class="form-control" ng-model="object.url">
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <label>Description: </label>
+            <input type="text" class="form-control" ng-model="object.description">
+        </div>
+        <div class="col-xs-12 text-center">
+            <button class="submit" ng-click="submit(object)">Submit</button>
+        </div>
+
+    </div>
+    <div class="position container-fluid">
+        <div class="output col-xs-12 col-md-4" ng-repeat="object in uglyArray">
+            <h1>{{ object.name }}</h1>
+            <h4>{{ object.description }}</h4>
+            <img src="{{ object.url }}" alt="">
+            <div>
+                <label>Comment</label>
+                <input type="text" ng-model="comment.item">
+                <button ng-click="addComment(comment)" class="comment">ADD</button>
+            </div>
+            <div class="col-xs-12 text-center" ng-repeat="comment in comments">
+                <ul>
+                    <li>{{ comment.item }} <button ng-click="delete">X</button></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

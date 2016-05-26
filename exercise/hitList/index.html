@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="GetApi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hit List</title>
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="mainController">
+    <section>
+        <div class="hit" ng-repeat="person in people">
+            <img ng-src="{{ person.image }}" alt="">
+            <h1>{{ person.name }}</h1>
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+
+    <script src="app.js"></script>
+    <script src="services/api.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+div.input {
+    background-color: darkgoldenrod;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 20px
+}
+button {
+    color: darkgoldenrod;
+    background-color: darkseagreen;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+button.submit {
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+div.output {
+    padding: 20px;
+    text-align: center;
+    border: 10px solid darksalmon;
+    box-sizing: border-box;
+}
+div.position {
+    margin-top: 140px
+}
+img {
+    height: 200px;
+}
+@media (max-width: 1040px){
+    h1 {
+        font-size: 35px;
+    }
+}
+@media (max-width: 990px) {
+    div.position {
+        margin-top: 255px;
+    }
+}

@@ -1,0 +1,20 @@
+input {
+    text-align: center;
+}
+section.items {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+p.inline {
+    display: inline;
+    float: right;
+}
+.completed {
+    text-decoration: line-through;
+    color: #555;
+}
+img.right {
+    float: right;
+}
