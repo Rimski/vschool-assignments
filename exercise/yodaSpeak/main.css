@@ -3,9 +3,37 @@ section {
     text-align: center;
 }
 body {
-    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQtYbMaUG-mujwFcwe6zrpY4F37LqLPrTUx18YsLmYPQ0kbKp3MFQ");
+    background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRkC3rD19f21ezy_sM8_eY7bihKhLNs1VSJYVJ1KD6rYg93bJsA");
     background-size: cover;
 }
-h2 {
-    color: yellow;
+h1 {
+    color: black;
+}
+input {
+    height: 33px;
+    width: 400px;
+    border: 2px solid darkgreen;
+    border-radius: 5px;
+    font-size: 16px;
+}
+div {
+    display: block;
+    margin: 10px;
+}
+button {
+    height: 37px;
+    width 75px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: darkgreen;
+    font-weight: 700;
+    font-size: 16px;
+}
+button:hover {
+    background-color: darkolivegreen;
+}
+div.input {
+    position: absolute;
+    top: 40%;
+    left: 10%;
 }

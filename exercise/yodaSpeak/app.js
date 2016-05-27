@@ -3,9 +3,9 @@ app.controller("translationController", ["$scope", "HttpService", function ($sco
     var baseUrl = "https://yoda.p.mashape.com/yoda?sentence="
     $scope.sentance = {};
     $scope.translate = function (sentance) {
+        $scope.sentance = {};
         HttpService.get(baseUrl, sentance.info).then(function (data) {
             $scope.response = data;
-            $scope.words = {};
         })
     }
 }])
