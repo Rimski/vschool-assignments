@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="RoutingApp">
+
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
+
+<body class="container-fluid">
+    <nav class="row">
+        <ul>
+           <a href="#/"><li class="nav">
+            Home
+               </li></a>
+            <a href="#/about"><li class="nav">
+            About
+            </li></a>
+            <a href="#/whyILove"><li class="nav">
+            Why I Love Oregon
+            </li></a>
+        </ul>
+    </nav>
+    <div class="row" ng-view></div>
     
-    
-    <script src=""></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src="app.js"></script>
+    <script src="about/about.js"></script>
+    <script src="home/home.js"></script>
+    <script src="whyILove/why.js"></script>
 </body>
+
 </html>

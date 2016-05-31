@@ -1,0 +1,50 @@
+body {
+    text-align: center;
+    background-color: #FF7D00;
+    color: #00303D;
+/*    color: #005269;*/
+}
+section {
+    width: 80%;
+    margin: 20px auto;
+}
+input {
+    display: block;
+    margin: auto;
+    width: 400px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid;
+    border-bottom-color: #7F3E00;
+    border-right-color: #7F3E00;
+    border-top-color: #944800;
+    border-left-color: #944800;
+}
+button {
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #944800;
+    color: #00303D;
+/*    color: #005269;*/
+    border-bottom-color: #7F3E00;
+    border-right-color: #7F3E00;
+    border-top-color: #944800;
+    border-left-color: #944800;
+}
+img {
+    background-color: #fff;
+    border: 3px solid;
+    border-bottom-color: #7F3E00;
+    border-right-color: #7F3E00;
+    border-top-color: #944800;
+    border-left-color: #944800;
+    border-radius: 5px;
+}
+@media (max-width: 500px){
+    input {
+        width: 300px;
+    }
+}

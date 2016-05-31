@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Poke Profile</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="mainController">
+    <section class="input">
+    <h3>Enter Pokemon Number</h3>
+    <form>
+    <input type="number" ng-model="x" min="1" max="718" required>
+    <button ng-show="x" ng-click="getPokemon(x)">Get Pokemon</button>    
+    </form>
+    </section>
+    <section class="output">
+        <h1>{{ pokemon.name }}</h1>
+        <h3>Attack: {{ pokemon.attack }}</h3>
+        <h3>Ability: {{ pokemon.ability }}</h3>
+        <img ng-src="{{ pokemon.img }}" alt="">
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/pokeAPI.js"></script>
+</body>
+</html>
