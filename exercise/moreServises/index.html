@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShowApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cartoon Stuff</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="mainController" class="container-fluid">
+    <nav class="row">
+        <div class="input col-xs-12 col-md-4">
+            <label>Title</label>
+            <input class="form-control" type="text" ng-model="show.title">
+        </div>
+        <div class="input col-xs-12 col-md-4">
+            <label>Img URL</label>
+            <input class="form-control" type="text" ng-model="show.img">
+        </div>
+        <div class="input col-xs-12 col-md-4">
+            <label>Description</label>
+            <input class="form-control" type="text" ng-model="show.description">
+        </div>
+        <div class="col-xs-12 text-center">
+            <button ng-click="submit(show)">Submit</button>
+        </div>
+    </nav>
+    <section class="container" ng-repeat="item in list">
+        <div class="row">
+            <h1>{{ item.title }}</h1>
+        </div>
+        <div class="row">
+            <p>{{ item.description }}</p>
+        </div>
+        <div class="row">
+            <img ng-src="{{ item.img }}" alt="">
+        </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="services/service.js"></script>
+</body>
+
+</html>

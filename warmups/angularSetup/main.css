@@ -1,0 +1,31 @@
+body {
+    background-color: #bbb;
+}
+section {
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    background-color: #eee;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    margin: 10px auto;
+}
+input {
+    width: 80%;
+    margin: 10px auto;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #ddd
+}
+button {
+    display: block;
+    margin: auto;
+    font-size: 30px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 4em;
+    font-family: "Zapf Dingbats Regular";
+}
