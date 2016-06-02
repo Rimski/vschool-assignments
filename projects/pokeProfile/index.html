@@ -13,7 +13,7 @@
     <button ng-show="x" ng-click="getPokemon(x)">Get Pokemon</button>    
     </form>
     </section>
-    <section class="output">
+    <section class="output" ng-show="pokemon ">
         <h1>{{ pokemon.name }}</h1>
         <h3>Attack: {{ pokemon.attack }}</h3>
         <h3>Ability: {{ pokemon.ability }}</h3>

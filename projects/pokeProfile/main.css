@@ -1,8 +1,11 @@
 body {
     text-align: center;
-    background-color: #FF7D00;
+    background-image: url(http://imagesci.com/img/2013/05/sleeping-pikachu-wallpaper-5737-hd-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #FFBC01;
     color: #00303D;
-/*    color: #005269;*/
 }
 section {
     width: 80%;
@@ -46,5 +49,8 @@ img {
 @media (max-width: 500px){
     input {
         width: 300px;
+    }
+    body{
+        background-position: left;
     }
 }
