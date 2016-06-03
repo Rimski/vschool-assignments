@@ -34,6 +34,11 @@ a.nav {
 a.nav:hover {
     background-color: #eea489;
 }
+section.index {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
 section.home {
     background-image: url(http://4.bp.blogspot.com/-Qsv38zaEVNk/TqqYWAgHRYI/AAAAAAAAE-0/eeu1aMdRzeo/s1600/fabric+006.JPG);
     background-size: cover;
@@ -72,6 +77,7 @@ button {
 section.list {
     background-image: url(http://cdn.davidwolfe.com/wp-content/uploads/2016/02/clouds-1152735_1280-e1456604271374.jpg);
     background-size: cover;
+    background-repeat: repeat;
     height: 100%;
     width: 100%;
     display: block;

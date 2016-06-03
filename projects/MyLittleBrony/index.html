@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Little Brony</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="mainController">
+    <nav>
+        <ul>
+            <a class="nav" href="#/add">
+                <li class="nav">ADD</li>
+            </a>
+            <a class="nav" href="#/hom">
+                <li class="nav">HOME</li>
+            </a>
+        </ul>
+    </nav>
+    <div class="si">
+        <div class="carasel">
+            <ul class=panes>
+                <li>
+                    <img src="http://pre02.deviantart.net/8872/th/pre/i/2012/206/7/d/twilight_sparkle_by_hankofficer-d46dfaw.png" alt="">
+                </li>
+                <li>
+                    <img src="http://vignette4.wikia.nocookie.net/mlpfanart/images/f/ff/Applejack_3_by_xpesifeindx-d5gsde5.png/revision/latest?cb=20131015231355" alt="">
+                </li>
+
+                <li>
+                    <img src="http://vignette2.wikia.nocookie.net/mlp-gameloft/images/6/6a/Fluttershy_Vector.png/revision/latest?cb=20141214215316" alt="">
+                </li>
+                <li>
+                    <img src="http://1.bp.blogspot.com/-IrxWMAAa59Y/VJcwMUclj1I/AAAAAAAAAYo/WrLGJd5dc9I/s1600/Tumblr_mxzwafbm7w1s88ss5o1_1280.png" alt="">
+                </li>
+                <li>
+                    <img src="http://img07.deviantart.net/5ecb/i/2012/217/5/e/rainbow_dash_has_a_cunning_plan_by_ponyengineer-d59m2wq.png" alt="">
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <section ng-view></section>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="services/modelService.js"></script>
+</body>
+
+</html>

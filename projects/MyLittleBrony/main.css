@@ -1,0 +1,108 @@
+body {
+background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNqd1RmmV7yFQtgFFT6u5RftFyAIRr6owNIkLk41C-ia8OlivmKQ);
+background-size: cover;
+background-position: bottom;  
+}
+nav {
+    background-color: #85205C;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    left: 0px;
+    height: 10%;
+    z-index: 1;
+    border-bottom-left-radius: 10px
+}
+li.nav {
+    list-style: none;
+    display: inline-block;
+    color: aliceblue;
+    padding: 20px;
+    font-size: 20px;
+}
+a.nav {
+    padding-bottom: 24px;
+    padding-top: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+    text-decoration-line: none;
+}
+a.nav:hover {
+    background-color: #6B1A4A;
+}
+.carasel {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.panes {
+    list-style: none;
+    position: relative;
+    float: left;
+    width: 500%;
+    height: 80%;
+    overflow: hidden;
+    animation: carousel 50s infinite;
+}
+.panes > li {
+    position: relative;
+    margin: 0px;
+    float: left;
+    width: 20%;
+    overflow: hidden;
+}
+.carasel img {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+}
+div.size {
+    width: 80%;
+    margin: auto
+}
+form {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: rgba(200, 200, 200, .7);
+    width: 60%;
+    text-align: center;
+    border-radius: 20%
+}
+input {
+    width: 70%;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+button {
+    font-size: 20px;
+    margin: 10px auto;
+    display: block;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: #AE7DA8;
+    color: aliceblue;
+}
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+}
