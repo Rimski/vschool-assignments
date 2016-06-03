@@ -1,8 +1,14 @@
-<ul>
-    <a href="/profile"><div>
-        <img src="{{ robot.img }}" alt="">
-        <h3>{{ robot.name }}</h3>
-        <h3>{{ robot.quote }}</h3>
-        <img src="{{ robot.qrImg }}" alt="">
-    </div></a>
-</ul>
+<section class="list">
+<h1 ng-hide="robot">You need to make Robots to see them, silly goose.</h1>
+
+<div class="list" ng-repeat="robot in robots">
+    <a class="list" href="#/profile" ng-click="veiwRobot(robot)">
+        <div class="robots">
+           <div class="words">
+               <h3>{{ robot.name }}</h3>
+           </div>
+            <img ng-src="{{ robot.img }}" alt="">
+        </div>
+    </a>
+</div>
+</section>

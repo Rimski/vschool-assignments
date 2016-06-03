@@ -2,22 +2,21 @@
 <html lang="en" ng-app="mainApp">
 <head>
     <meta charset="UTF-8">
-    <title>Build-A-bot</title>
+    <title>Wish List</title>
     <link rel="stylesheet" href="main.css">
 </head>
-<body ng-controller="mainController">
+<body>
     <nav>
-        <ul>
-            <li><a class="nav" href="#/list">list</a></li>
-            <li><a class="nav" href="#/home">home</a></li>
-        </ul>
+    <ul>
+        <a href="#/other"><li>Other</li></a>
+        <a href="#/home"><li>Computer</li></a>
+    </ul>
     </nav>
+    
     <section ng-view></section>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
     <script src="app.js"></script>
-    <script src="services/roboService.js"></script>
-    <script src="services/QRService.js"></script>
-    <script src="services/RandomFamousQoute.js"></script>
+    <script src="directives/wishItem.js"></script>
 </body>
 </html>

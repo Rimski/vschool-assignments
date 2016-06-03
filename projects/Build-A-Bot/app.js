@@ -15,7 +15,7 @@ app.config(function ($routeProvider) {
 });
 
 app.controller("mainController", ["$scope", "$location", "QRService", "RFQService", "roboService", function($scope, $location, QRService, RFQService, roboService) {
-    
+  $scope.robots = [];
   $scope.makeRobot = function(input) {
       $scope.robot = {};
       $scope.robot.name = input.name
@@ -24,13 +24,21 @@ app.controller("mainController", ["$scope", "$location", "QRService", "RFQServic
           QRService.makeQR($scope.robot.img).then(function(data) {
               $scope.robot.qrImg = data;
               console.log($scope.robot);
+              $scope.robot = {};
           })
       });
       RFQService.getQoute(input.name).then(function(data) {
-          $scope.robot.quote = data;
+          $scope.robot.quote = data.quote;
+          $scope.robot.idol = data.author;
+          $scope.robot.dream = data.category;
       })
+      $scope.robots.push($scope.robot);
       
-       $location.path("veiws/list.html");
+       $location.path("/list");
   }  
-    
+   
+  $scope.veiwRobot = function(robot){
+      $scope.robot = robot;
+  }
+  
 }])
