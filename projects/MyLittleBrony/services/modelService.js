@@ -8,7 +8,6 @@ app.service("ponyHttp", ["$http", function($http) {
     })
     }
     this.getPony = function() {
-        console.log("got to service");
         return $http.get(baseUrl).then(function(response) {
             ponys = response.data;
             return (ponys);
@@ -16,7 +15,7 @@ app.service("ponyHttp", ["$http", function($http) {
     }
     this.removePony = function(pony) {
         var x = ponys.indexOf(pony);
-        $http.delete(baseUrl, []).then(function(response) {
+        $http.delete(baseUrl + "/" + [pony._id]).then(function(response) {
             ponys.splice(x, 1)
         })
     }

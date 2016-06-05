@@ -1,5 +1,7 @@
-<h1>Welcome to pony ville</h1>
+<div class="pen">
 <div class="ponies" ng-repeat="pony in ponies">
     <h2>{{ pony.name }}</h2>
-    <img ng-src="{{ pony.imgUrl }}" alt="">
+    <img class="pony" ng-src="{{ pony.imgUrl }}" alt="">
+    <button ng-click="deleteOne(pony)">Delete</button>
+</div>
 </div>
