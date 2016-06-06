@@ -10,4 +10,4 @@ function isPalendrome(string) {
 }
 
 
-console.log(isPalendrome("taco cat"));
+console.log(isPalendrome("skylee"));

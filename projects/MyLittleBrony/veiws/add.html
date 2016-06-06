@@ -1,10 +1,10 @@
 <form>
-    <h3>Name: </h3>
+    <h3>Name: <span ng-show="tryAgain">Must be at least three characters</span> </h3>
     <input type="text" ng-model="pony.name">
     <h3>Image URL: </h3>
     <input type="text" ng-model="pony.imgUrl">
     <h3>User name: </h3>
     <input type="text" ng-model="pony.username">
-    <button ng-click="addPony(pony)">ADD</button>
-    <div ng-show="tryAgain"><h2>You must enter something in all three fields</h2></div>
+    <button ng-show="pony.username && pony.name && pony.imgUrl" ng-click="addPony(pony)">ADD</button>
+    <div ng-show="tryAgain"><h2><span>You must enter something in all three fields</span></h2></div>
 </form>

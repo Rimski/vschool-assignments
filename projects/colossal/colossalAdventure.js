@@ -48,6 +48,8 @@ function print() {
         newPlayer.inventory + "\nCurrent health: " + newPlayer.hp)
     if (newPlayer.hp > 0) {
         walking();
+    } else {
+        console.log("Thanks for the stuff.");
     }
 }
 
