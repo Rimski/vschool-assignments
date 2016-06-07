@@ -14,13 +14,14 @@ nav {
     border-bottom-left-radius: 10px
 }
 li.nav {
+    line-height: 3;
     list-style: none;
     display: inline-block;
     color: aliceblue;
     font-size: 20px;
 }
 a.nav {
-    padding-bottom: 37px;
+    padding-bottom: 20px;
     padding-top: 70px;
     padding-right: 50px;
     padding-left: 50px;
@@ -31,6 +32,25 @@ a.nav {
 a.nav:hover {
     background-color: #6B1A4A;
     color: transparent;
+}
+h2.sign {
+    font-family: monospace;
+    margin: 20px auto;
+    padding: 3px;
+    font-size: 12px;
+    color: #EDF2F4;
+    text-align: center;
+    font-size: 16px;
+    width: 75px
+}
+div.sign{
+    position: absolute;
+    top: 30%;
+    background-image: url(http://www.clker.com/cliparts/m/F/i/G/X/L/blank-wood-sign-md.png);
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    
 }
 .carasel {
     overflow: hidden;
@@ -68,9 +88,10 @@ div.size {
 form {
     position: absolute;
     top: 100px;
-    left: 20%;
+    left: 10%;
+    right: 10%;
     background-color: rgba(200, 200, 200, .7);
-    width: 60%;
+    width: 80%;
     text-align: center;
     border-radius: 20%;
     padding-bottom: 20px;
@@ -146,7 +167,15 @@ div.ponies:hover {
     div.ponies{
         width: 50%;
         display: inline-block;
-    }    
+    }   
+    form {
+        width: 60%;
+        left: 20%;
+        right: 20%;
+    }
+    div.sign{
+        top: 45%;
+    }
 }
 
 @media (min-width: 850px){
@@ -157,9 +186,15 @@ div.ponies:hover {
     img.pony {
         height: 300px
     }
+    div.sign{
+        top: 75%
+    }
 }
 @media (min-width: 1200px) {
     div.ponies{
         width: 25%;
+    }
+    div.sign {
+        top: 90%
     }
 }
