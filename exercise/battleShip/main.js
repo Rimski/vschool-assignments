@@ -70,9 +70,9 @@ function printArray(array) {
         var displayRow = "";
         var item = array[i]
         for (var j = 0; j < item.length; j++) {
-            displayRow += (item[j].display())
+            displayRow += (item[j].display() + " ")
         }
-        console.log(displayRow);
+        console.log("\t" + displayRow);
         displayRow = "";
     }
 }

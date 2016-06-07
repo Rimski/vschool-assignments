@@ -64,7 +64,7 @@ function enemyPicker() {
         console.log(" oh no's a vagrent");
         console.log("it's " + "Christopher");
         var fight = readline.question("do you want to run or fight?");
-        if (fight === "fight") {
+        if (fight === "fight" || fight === "a") {
             battle(Christopher, newPlayer, ("A watch and a long story. "));
         } else {
             running(Christopher);
@@ -74,7 +74,7 @@ function enemyPicker() {
         console.log(" oh no's a vagrent");
         console.log("it's " + "Clem");
         var fight = readline.question("do you want to run or fight?");
-        if (fight === "fight") {
+        if (fight === "fight" ||fight === "a") {
             battle(Clem, newPlayer, (" The Concept of the toothfairy, "));
         } else {
             running(Clem);
@@ -115,9 +115,9 @@ function enemyPicker() {
     } else if (maths === 6) {
         console.log(" oh no's a vagrent");
         console.log("it's " + "TymberTheMedicalHobo");
-        console.log("wait im not vagrent")
+        console.log("wait im not vagrent");
         var what = readline.question("I'm a shady doctor who operates on \n on the forest floor. do you want me to operate on you? y for yes n for no.  ")
-        if (what === "y") {
+        if (what === "y" || what === "a") {
             var fight = readline.question("just take a second and sign this waiver ");
             if (fight === "no" || fight === "you're crazy") {
                 console.log("WHOOP WHOOP WHOOP as the crazy hobo runs off ");
@@ -161,13 +161,12 @@ function battle(enemy, player, object) {
             console.log("You hurt " + enemy.name + " his health is at " + fightEnemy);
             newPlayer.hp = (newPlayer.hp -= randomAttack);
             console.log(enemy.name + " strikes back; your health is now " + player.hp);
-            newPlayer.inventory += [object];
         } else
         if (fightEnemy <= 0) {
             console.log("You killed " + enemy.name + "whats wrong with you?!?!");
+            newPlayer.inventory += [object];
             walking();
-            newPlayer += object;
-        } else console.log("why??!")
+        } else {console.log("why??!")}
 
 
         while (!fightEnemy < 0 || !player.hp < 0) {
