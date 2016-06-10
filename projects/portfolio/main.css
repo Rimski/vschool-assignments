@@ -98,6 +98,7 @@ p.block {
 div.project {
     width: 33%;
     margin: auto;
+    transition: width 2s;
 }
 div.project:hover {
     width: 80%;

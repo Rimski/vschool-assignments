@@ -13,7 +13,7 @@ function Location() {
         } else if (this.hit === true && this.ship != 5) {
             return "M";
         } else if (this.hit === false) {
-            return "0";
+            return "~";
         } else {
             return "Why";
         }
@@ -59,9 +59,9 @@ function fireTorpedo(x, y) {
     grid[myX][myY].hit = true;
     if (grid[myX][myY].ship === 5) {
         shipCount = shipCount + 1;
-        console.log("You Sunk my Battle Ship");
+        console.log("\tYou Sunk my Battle Ship");
     } else {
-        console.log("You Missed")
+        console.log("\tYou Missed")
     }
 };
 
@@ -72,9 +72,10 @@ function printArray(array) {
         for (var j = 0; j < item.length; j++) {
             displayRow += (item[j].display() + " ")
         }
-        console.log("\t" + displayRow);
+        console.log("\t" + i + " " + displayRow);
         displayRow = "";
     }
+    console.log("      Y \t  " + 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 + "\n")
 }
 
 makeShips();
@@ -85,7 +86,7 @@ while (shipCount < 3) {
     var myX = readline.question("enter x coradinate I.E. 0-9: ");
     var myY = readline.question("enter y coradinate I.E. 0-9: ");
     fireTorpedo(myX, myY);
-    console.log("Sunk Ships: " + shipCount)
+    console.log("\tSunk Ships: " + shipCount + "\n")
     printArray(grid);
 }
 console.log("You Destroyed the enemy fleet.")
