@@ -1,0 +1,11 @@
+<div class="sign" ng-hide="showList" ng-click="showList = !showList">
+<h2 class="sign" >Show List</h2>
+</div>
+<div class="pen" ng-show="showList">
+<div class="ponies" ng-repeat="pony in ponies">
+    <h2>{{ pony.name }}</h2>
+    <img class="pony" ng-src="{{ pony.imgUrl }}" alt="">
+    <button ng-click="deleteOne(pony)">Delete</button>
+</div>
+<button ng-click="showList = !showList">Hide</button>
+</div>

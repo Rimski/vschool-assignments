@@ -1,0 +1,128 @@
+body {
+    background-image: url(http://cdn.davidwolfe.com/wp-content/uploads/2016/02/clouds-1152735_1280-e1456604271374.jpg)
+}
+nav {
+    text-align: left;
+    background-color: #FFB5AB;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 75px;
+}
+a {
+    color: #241200;
+    text-decoration: none;
+    font-family: sans-serif;
+    
+}
+a.nav {
+    padding: 20px;
+    font-size: 30px;
+    padding-left: 50px;
+    font-weight: bolder;
+    padding-right: 50px;
+}
+a.nav:hover {
+    background-color: #eea489;
+}
+section.index {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+section.home {
+    background-image: url(http://4.bp.blogspot.com/-Qsv38zaEVNk/TqqYWAgHRYI/AAAAAAAAE-0/eeu1aMdRzeo/s1600/fabric+006.JPG);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: #241200;
+    top: 70px;
+    left: 0px;
+}
+form {
+    width: 80%;
+    margin: auto;
+    background-color: rgba(210, 255, 255, .7);
+    border-radius: 50%;
+    padding: 50px;
+}
+input {
+    width: 50%;
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+button {
+    font-size: 20px;
+    border-radius: 50%;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #00C7FF;
+    color: #241200;
+}
+section.list {
+    background-image: url(http://cdn.davidwolfe.com/wp-content/uploads/2016/02/clouds-1152735_1280-e1456604271374.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: #241200;
+    top: 70px;
+    left: 0px;
+}
+div.list {
+    box-sizing: border-box;
+    width: 25%;
+    display: inline-block;
+}
+div.words {
+    background-color: aliceblue;
+    font-size: 20px;
+    padding: 10px;
+    opacity: .6;
+}
+div.robots:hover {
+    background-color: rgba(210, 255, 255, .7);
+}
+section.profile {
+    background-image: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTmalJzc0JVO0GQ9ceklUplLD7-XR0J2NFMPVs_JIP9eANG0dHEog);
+    background-size: cover;
+    background-color: #000;
+    background-repeat: repeat-y;
+    opacity: .9;
+    height: 110%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    text-align: center;
+    color: #000;
+    top: 70px;
+    left: 0px;
+}
+div.pad {
+    width: 80%;
+    margin: auto;
+    border-radius: 50px;
+    background-color: rgba(45, 255, 255, 0.1);
+    padding: 50px;
+    z-index: 1;
+}

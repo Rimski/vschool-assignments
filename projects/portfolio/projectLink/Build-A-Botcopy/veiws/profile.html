@@ -1,0 +1,9 @@
+<section class="profile">
+<div class="pad">
+<h1 ng-show="robot">It's a ... Robot; Here's you're little {{ robot.name }}.</h1>
+<img ng-src="{{ robot.img }}" alt="">
+<h3 class="famous" ng-show='robot.dream === "Famous"'>{{ robot.name }} say's "{{ robot.quote }} i want to be like {{ robot.idol }} and be {{ robot.dream }}."</h3>
+<h3 class="movies" ng-show='robot.dream === "Movies"'>{{ robot.name }} say's "{{ robot.quote }} i want to be in the {{ robot.dream }}."</h3>
+<h2 class="famous" ng-show="robot">Scan this <img ng-src="{{ robot.qrImg }}" alt=""> to take {{ robot.name }} home with you</h2>
+</div>
+</section>
