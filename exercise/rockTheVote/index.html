@@ -7,13 +7,31 @@
     <link rel="stylesheet" href="main.css">
 </head>
 
-<body ng-controller="mainController">
-
-   
-   
-   <div ng-repeat="item in agenda"></div>
+<body ng-controller="mainController">   
+  <div>
+      <label>Name: </label>
+      <input type="text" ng-model="topic.name">
+      <label>description: </label>
+      <input type="text" ng-model="topic.description">
+      <button ng-click="addTopic(topic)">Submit</button>
+  </div>
+   <div ng-repeat="item in agenda | orderBy: '-popular'">
+      <button ng-click="item.popular = item.popular + 1">UP</button>
+      <h3>{{ item.popular }}</h3>
+      <button ng-click="item.popular = item.popular - 1">Down</button>
+       <h3>{{ item.name }}</h3>
+       <h3>{{ item.description }}</h3>
+       <div ng-repeat="comment in item.comments track by $index">
+           <p>{{ comment }}</p>
+       </div>
+       <button ng-click="deleteThread(item)">Delete</button>
+       <input type="text" ng-model="item.comment">
+       <button ng-click="addComment(item)">Comment</button>
+       
+   </div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
     <script src="app.js"></script>
+    <script src="services/httpServis.js"></script>
 </body>
 
 </html>

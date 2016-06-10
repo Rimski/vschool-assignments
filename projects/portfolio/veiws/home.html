@@ -1,0 +1,8 @@
+<h1>HomePage</h1>
+<div ng-repeat="item in projects">
+    <h2>{{ item.name }}</h2>
+    <div class="project">
+        <img class="project" src="{{ item.imgUrl }}" alt="">
+    </div>
+    <p>{{ item.description }}</p>
+</div>
