@@ -3,13 +3,13 @@ var app = angular.module("MainApp", ["ngRoute"]);
 app.config(function ($routeProvider) {
     $routeProvider
         .when("/about", {
-            templateUrl: "veiws/aboutMe.html"
+            templateUrl: "views/aboutMe.html"
         })
         .when("/resume", {
-            templateUrl: "veiws/resume.html"
+            templateUrl: "views/resume.html"
         })
         .otherwise({
-            templateUrl: "veiws/home.html"
+            templateUrl: "views/home.html"
         })
 
 })
