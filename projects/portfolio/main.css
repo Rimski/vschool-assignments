@@ -76,7 +76,7 @@ div.about::after {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("https://scontent-dfw1-1.xx.fbcdn.net/t31.0-8/s960x960/460374_135978256536770_1315347990_o.jpg");
+    background-image: url("ScreenShots/me.png");
     width: 100%;
     height: 100%;
     opacity: .9;
@@ -86,7 +86,10 @@ div.about::after {
     background-size: cover;
     background-attachment: fixed;
 }
-
+p.description {
+    width: 60%;
+    margin: auto;
+}
 
 /*   resume stuff   */
 
@@ -107,12 +110,16 @@ div.underline {
     width: 80%;
     margin: 10px auto;
     display: block;
+    position: relative;
 }
 
 h2.underline {
     position: relative;
-    top: -15px;
-    display: block;
+    top: -35px;
+    display: inline-block;
+    background-color: rgba(200, 200, 200, 0.7);
+    border-radius: 100%;
+    b
 }
 
 p.block {
@@ -187,6 +194,9 @@ div.backGround::after {
         width: 50%;
         display: inline-block;
     }
+    div.project {
+        width: 80%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -195,5 +205,11 @@ div.backGround::after {
     }
     section.main {
 top: 99px;
+    }
+    div.project {
+        width: 100%;
+    }
+    div.project:hover {
+        width: 100%;
     }
     }
