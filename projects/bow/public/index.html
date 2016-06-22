@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bow Fishing</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body ng-controller="mainController">
+    <nav>
+        <ul>
+            <a href="#/"><li class="nav">{{ test }}</li></a>
+            <a href="#/records"><li class="nav">RECORD BOARD</li></a>
+            <a href="#/gear"><li class="nav">GEAR</li></a>
+        </ul>
+    </nav>
+    <section class="veiw" ng-view></section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="directive/ngDragable.js"></script>
+    <script src="./service/fishHttp.js"></script>
+</body>
+
+</html>

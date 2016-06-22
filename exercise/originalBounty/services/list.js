@@ -8,12 +8,12 @@ app.service("HTTPService", ["$http", function ($http) {
         })
     };
     this.deleteOne = function (person) {
-        return $http.delete(baseUrl + "/" + person.id).then(function (responce) {
+        return $http.delete(baseUrl + "/" + person._id).then(function (responce) {
             return responce.data;
         })
     };
     this.editOne = function (person) {
-        $http.put(baseUrl + "/" + person.id, person);
+        $http.put(baseUrl + "/" + person._id, person);
     };
     this.getList = function (person) {
         return $http.get(baseUrl).then(function (responce) {

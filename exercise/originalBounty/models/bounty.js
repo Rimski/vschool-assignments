@@ -1,9 +1,16 @@
-var bounty = [{
-    firstName: "Jaba",
-    lastName: "The Hut",
-    liveing: true,
-    price: "800000",
-    type: "fatty",
-    id: "1"
-}];
-module.exports = bounty;
+var mongoose = require("mongoose");
+var Schema = mongoose.Schema;
+
+var newBounty = new Schema({
+    firstName: String,
+    lastName: String,
+    liveing: {
+        type: Boolean,
+        default: true,
+        reqired: true
+    },
+    price: Number,
+    type: String
+});
+
+module.exports = mongoose.model("bounty", newBounty);

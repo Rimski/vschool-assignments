@@ -1,1 +1,0 @@
-with this project i mimicked K & J blogs design from scratch.

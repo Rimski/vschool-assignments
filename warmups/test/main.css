@@ -1,0 +1,5 @@
+div.gallery {
+    box-sizing: border-box;
+    width: 33%;
+    display: inline-block;
+}

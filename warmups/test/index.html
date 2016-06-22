@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body>
+
+    <div id="image">
+        <!--    you could create a text node and append it rather than adding a p tag
+        but hard codeing it is a little easier  -->
+        <img src="" alt="" id="displayImg">
+
+        <p id="displayText">Hover over an image below to display here.</p>
+    </div>
+
+    <img class="preview" alt="Styling with a Bandana" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg" id="img1">
+
+    <img class="preview" alt="With My Boy" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon2.JPG" id="img2">
+
+    <img class="preview" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon3.jpg" alt="Young Puppy" id="img3">
+    <!--    i moved the script to the bottom so that you're html will load before the js
+        this can prevent some "can not get/append/set ****** to undefined" errors.
+        (i've heard either way is fine but this just the way i learned)-->
+    <script src="main.js"></script>
+</body>
+
+</html>

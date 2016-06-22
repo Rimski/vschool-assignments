@@ -17,7 +17,7 @@ app.controller("mainController", ["$scope", "HTTPService", function($scope, HTTP
        HTTPService.deleteOne(person).then(function(data) {
        console.log(data);
             for (var i = 0; i < $scope.bounties.length; i++){
-                if ($scope.bounties[i].id === person.id) {
+                if ($scope.bounties[i]._id === person._id) {
                     $scope.bounties.splice(i, 1);
                 }
             }    

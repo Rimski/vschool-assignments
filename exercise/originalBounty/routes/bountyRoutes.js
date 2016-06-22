@@ -1,46 +1,41 @@
 var express = require("express");
 var bountyRoutes = express.Router();
 var bounties = require("../models/bounty");
-var uuid = require("uuid");
-
 
 bountyRoutes.route("/")
     .get(function (req, res) {
-        res.send(bounties);
+        bounties.find(function (err, list) {
+            if (err) throw err;
+            res.send(list);
+        })
     })
     .post(function (req, res) {
-        req.body.id = uuid.v4();
-        req.body.liveing = true;
-        bounties.push(req.body);
-        res.send(req.body);
+        var newBounty = new bounties(req.body);
+        newBounty.save(function (err, item) {
+            res.send(item)
+        });
     })
 bountyRoutes.route("/:id")
     .get(function (req, res) {
-        for (var i = 0; i < bounties.length; i++) {
-            if (bounties[i] === req.params.id) {
-                return res.send(bounties[i]);
-            }
-        }
-        res.send("No bounty with that Id.")
+        findById(route.params.id, function (err, item) {
+            if (err) throw err;
+            res.send(item);
+        })
     })
     .put(function (req, res) {
-        for (var i = 0; i < bounties.length; i++) {
-            if (bounties[i] === req.params.id) {
-                req.body.id = bounties[i].id;
-                bounties[i] = req.body;
-                return res.send(bounties[i]);
-            }
-        }
-        res.send("No bounty with that Id.")
+        bounties.findByIdAndUpdate(req.params.id, req.body, {
+            new: true
+        }, function (err, item) {
+            if (err) throw err;
+            item.save();
+            res.send(item);
+        });
     })
     .delete(function (req, res) {
-        for (var i = 0; i < bounties.length; i++) {
-            if (bounties[i] === req.params.id) {
-                bounties.splice(i, 1);
-                return res.send("BURNINATED");
-            }
-        }
-        res.send("No bounty with that Id.")
+        bounties.findByIdAndRemove(req.params.id, function (err) {
+            res.send("BURNINATED");
+        });
+
     })
 
 module.exports = bountyRoutes;
