@@ -1,16 +1,19 @@
-<h1>Gear page</h1>
-<div>
+<div class="container p">
+<div class="records">
    <h2>input face image here: </h2>
     <input type="text" ng-model="gear.face">
 </div>
-  <div>
-   <h2>input face image here: </h2>
+  <div class="records">
+   <h2>and here: </h2>
     <input type="text" ng-model="gear.face2">
+</div>
 </div>
 
 <div id="fishing">
 <img ng-draggable ng-src="{{ gear.face }}" alt="" class="face">
 <img ng-draggable ng-src="{{ gear.face2 }}" alt="" class="face">
+<img ng-draggable src="http://vignette3.wikia.nocookie.net/finalfantasy/images/f/f9/LightningArrows-ffxii.png/revision/latest?cb=20130704120149" alt="" class="hat">
+<img ng-draggable src="http://wrightssports.com/uploads/jumping-fish-transparent.png" alt="" class="hat">
 <img class="hat" ng-draggable src="http://www.mexican-folk-art-guide.com/image-files/palm-hat.png" alt="">
 <img class="hat" ng-draggable src="http://www.sideshowtoy.com/wp-content/uploads/2013/06/900026-product-silo.png" alt="">
 <img class="glasses" ng-draggable src="http://d3b4di70nev5h5.cloudfront.net/media/glasses/sun-killer-kl3012-gunmetal-smoke-aviator-polarized-sunglasses.png" alt="">

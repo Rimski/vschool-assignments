@@ -5,11 +5,8 @@ app.directive('ngDraggable', function($document, $window){
     var startX = 0;
     var startY = 0;
 
-    // Start with a random pos
-//    var x = Math.floor((Math.random() * 500) + 40);
-//    var y = Math.floor((Math.random() * 360) + 40);
-      var x = 300;
-      var y = 60;
+      var x = 30;
+      var y = 300;
 
     element.css({
       position: 'absolute',

@@ -1,30 +1,35 @@
-<h1>Record Page</h1>
-<div class="addFish" ng-show="add">
+<div class="addFish container" ng-show="add">
+    <div class="records">
     <h3>Title: </h3>
     <input type="text" ng-model="item.title">
     <h3>Length: </h3>
     <input type="number" ng-model="item.length">
     <h3>Weight: </h3>
     <input type="number" ng-model="item.weight">
+    </div>
+    <div class="records">
     <h3>Type: </h3>
     <input type="text" ng-model="item.type">
     <h3>Image: </h3>
     <input type="text" ng-model="item.imgUrl">
-    <button ng-click="addFish(item)">Submit</button>
+    <button class="block marginUp" ng-click="addFish(item)">Submit</button>
+    </div>
 </div>
-
+<div class="container">
 <button ng-click="add = !add">ADD</button>
-
-
-<div ng-repeat="fish in fishes | orderBy: '-popularity'">
+</div>
+<div class="container">
+<div class="records" ng-repeat="fish in fishes | orderBy: '-popularity'">
     <h1>{{ fish.title }}</h1>
-    <img ng-src="{{ fish.imgUrl }}" alt="">
-    <div class="votes">
+    <img class="records" ng-src="{{ fish.imgUrl }}" alt="">
+    <div class="votes container">
         <button ng-click="fishUp(fish)">Vote Up</button>
         <button ng-click="fishDown(fish)">Vote Down</button>
     </div>
+    <div class="container">
     <button ng-click="deleteFish(fish)">Delete</button>
     <button ng-click="fish.edit = !fish.edit">Edit</button>
+    </div>
     <div ng-show="fish.edit">
         <input type="text" ng-model="fish.title">
         <input type="number" ng-model="fish.length">
@@ -33,4 +38,5 @@
         <input type="text" ng-model="fish.imgUrl">
         <button ng-click="editFish(fish)">Finalize</button>
     </div>
+</div>
 </div>

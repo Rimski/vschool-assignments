@@ -8,6 +8,9 @@ app.config(function ($routeProvider) {
         .when("/records", {
             templateUrl: "./veiws/record.html"
         })
+        .otherwise({
+            templateUrl: "./veiws/home.html"
+        })
 });
 
 app.controller("mainController", ["$scope", "httpFish", function ($scope, httpFish) {
