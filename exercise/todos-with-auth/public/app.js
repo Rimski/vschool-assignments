@@ -1,19 +1,27 @@
 var app = angular.module("TodoApp", ["ngRoute", "TodoApp.Auth"]);
 
-app.config(function($routeprovider) {
-    $routeprovider
+app.config(function($routeProvider) {
+    $routeProvider
         .when("/", {
         templateUrl: "components/home/home.html"
     })
     .when("/todos", {
         templateUrl: "components/todos/todos.html",
-        controller: "todoController"
+        controller: "TodoController"
     })
     .when("/signup", {
-        templateUrl: "components/signup/signup.html",
+        templateUrl: "components/auth/signup/signup.html",
         controller: "SignupuController"
     })
-});
+    .when("/login", {
+        templateUrl: "components/auth/login/login.html",
+        controller: "LoginController"
+    })
+    .when("/logout", {
+        controller: "LogoutController",
+        template: ""
+    })
+})
 
 
 
