@@ -7,7 +7,7 @@ var port = process.env.port || 8000;
 var path = require("path");
 app.use(cors());
 app.use(bodyParser.json());
-//app.use(morgan("dev"));
+app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, "..", "public")));
 //postgres schema tabel stuff
 var jugglingdb = require("jugglingdb");
@@ -21,18 +21,18 @@ var schema = new Schema("postgres", {
 var _User = schema.define("_User", {
     name: {type: String, required: true},
     date:      { type: Date,    default: function () { return new Date;} },
-    timestamp: { type: Number,  default: Date.now },
+    timestamp: { type: Date,  default: Date.now },
     age: Number
 });
 var _Post = schema.define('_Post', {
     title: String,
     description: String,
     date:      { type: Date,    default: function () { return new Date;} },
-    timestamp: { type: Number,  default: Date.now },
+    timestamp: { type: Date,  default: Date.now },
 });
 
 _User.hasMany(_Post, {as: 'posts', foreignKey: "userId"});
-_Post.belongsTo(_User, {as: "author", foreignKey: "userid"});
+_Post.belongsTo(_User, {as: "author", foreignKey: "userId"});
 
 
 
@@ -40,11 +40,14 @@ schema.automigrate();
 // routes 
 app.post("/users", function(req, res) {
     var user = new _User(req.body);
-    user.save(function(err) {
-//        if (err) return res.status(500).send("there was a problem: " + err);
-//         res.send(item);
-        res.send(user);
-    console.log(user);
+    user.save(function (err, user) { 
+        if (err) return res.status(500).send(err);
+        var post = user.posts.build({ title: 'Hello world', description: "Description Text" });
+        post.save(function(err, post) {
+            if (err) return res.status(500).send(err);
+            res.send(user);
+        });
+        
     });
 });
 app.post("/posts", function(req, res) {
@@ -55,9 +58,12 @@ app.post("/posts", function(req, res) {
     })
 });
 app.get("/users", function(req, res) {
-   
-    res.send(schema.models._User);
-})
+    _User.all(function(err, users) {
+       if (err) return res.status(500).send(err);
+       res.send(users);
+   });
+});
+
 
 
 
