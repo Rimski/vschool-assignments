@@ -34,8 +34,6 @@ authRouter.post("/login", function (req, res) {
                     })
                 }
             })
-
-
         }
     });
 });

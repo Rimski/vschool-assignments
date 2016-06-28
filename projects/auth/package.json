@@ -17,7 +17,6 @@
     "jsonwebtoken": "^7.0.1",
     "jugglingdb": "^2.0.0-rc4",
     "jugglingdb-postgres": "^0.1.0",
-    "mongoose": "^4.5.1",
     "morgan": "^1.7.0"
   }
 }
