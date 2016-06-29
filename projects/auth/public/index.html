@@ -12,17 +12,18 @@
     <section ng-view></section>
     <nav>
         <ul>
-            <li><a href="#/login">LOG IN</a></li>
-            <li><a href="#/signup">SIGN UP</a></li>
-            <li><a href=""></a>LOG OUT</li>
+            <li ng-hide="loged"><a href="#/login">LOG IN</a></li>
+            <li ng-hide="loged"><a href="#/signup">SIGN UP</a></li>
+            <li ng-show="loged"><a ng-click="veiw()" href="#/elephants">YOUR ELEPHANTS</a></li>
+            <li ng-show="loged"><a ng-click="logOut()" href="#/logout">LOG OUT</a></li>
         </ul>
     </nav>
-    <div><button ng-click="logOut()">logout</button></div>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
     <script src="./app.js"></script>
     <script src="./components/services/authservices.js"></script>
-    <script src=""></script>
+    <script src="./components/services/elephantservices.js"></script>
+    <script src="./components/services/authinterceptor.js"></script>
 </body>
 
 </html>

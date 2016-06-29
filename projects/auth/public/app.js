@@ -11,13 +11,18 @@ app.config(function($routeProvider) {
         .when("/adopt", {
        templateUrl: "./components/veiws/adopt.html"
    })
-//        .otherwise({
-//       templateUrl: "./componets/veiws/landingpage.html"
-//   })
+        .when("/elephants", {
+       templateUrl: "./components/veiws/elephants.html"
+   })
+        .when("/profile", {
+       templateUrl: "./components/veiws/profile.html"
+   })
+        .otherwise({
+       templateUrl: "./components/veiws/landingpage.html"
+   })
 });
 
-app.controller("MainController", ["$scope", "authService", "$location", function($scope, authService, $location) {
-    $scope.test = "lolololololo";
+app.controller("MainController", ["$scope", "authService", "$location", "elephantService", function($scope, authService, $location, elephantService) {
     (function () {
         var token = localStorage.getItem("token");
         if (token) {
@@ -30,7 +35,8 @@ app.controller("MainController", ["$scope", "authService", "$location", function
         authService.login(user).then(function(responce) {
              localStorage.setItem("token", responce.token);
             $scope.loged = true;
-//            $location.path("./components/veiws/home.html");
+            localStorage.setItem("id", responce.user.id);
+            $location.path("/adopt");
             console.log(responce);
         })
     };
@@ -42,6 +48,20 @@ app.controller("MainController", ["$scope", "authService", "$location", function
     };
     $scope.logOut = function() {
         authService.logOut();
-//        $location.path("./components/veiws.landingpage.html");
+        $scope.loged = false;
+        $location.path("./components/veiws.landingpage.html");
+    }
+    $scope.adopt = function(elephant) {
+        elephant.userId = localStorage.getItem("id");
+        elephantService.adoptElephant(elephant).then(function(responce) {
+            console.log(responce);
+        })
+    };
+    $scope.veiw = function() {
+        var id = localStorage.getItem("id");
+        elephantService.getElephants(id).then(function(responce) {
+            console.log(responce.data);
+            $scope.zoo = responce.data;
+        })
     }
 }]);

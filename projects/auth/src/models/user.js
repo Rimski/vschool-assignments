@@ -24,3 +24,5 @@ _User.beforeSave = function(next, data) {
 };
 _User.hasMany(Elephant, {as: 'pets', foreignKey: "userId"});
 module.exports = ("users", _User);
+
+//schema.automigrate()

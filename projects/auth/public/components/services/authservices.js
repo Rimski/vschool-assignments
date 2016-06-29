@@ -13,5 +13,6 @@ app.service("authService", ["$http", function($http) {
     };
     this.logOut = function()  {
         localStorage.removeItem("token");
+        localStorage.removeItem("id");
     }
 }])
