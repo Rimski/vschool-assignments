@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adopt A Elephant</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="http://png-transparent-layer.com/wp-content/uploads/cache/2016/02/Elephant-Animal-1Pho7/3676290547.png">
+</head>
+
+<body ng-controller="MainController">
+    <section ng-view></section>
+    <nav>
+        <ul>
+            <li><a href="#/login">LOG IN</a></li>
+            <li><a href="#/signup">SIGN UP</a></li>
+            <li><a href=""></a>LOG OUT</li>
+        </ul>
+    </nav>
+    <div><button ng-click="logOut()">logout</button></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <script src="./app.js"></script>
+    <script src="./components/services/authservices.js"></script>
+    <script src=""></script>
+</body>
+
+</html>
