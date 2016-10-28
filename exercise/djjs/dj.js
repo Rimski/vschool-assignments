@@ -33,27 +33,25 @@ window.addEventListener("scroll", orangeColor);
 $(window).keydown(function (e) {
     if (e.which === 71) {
         greenColor();
-        }
     }
-);
+});
 $(window).keydown(function (e) {
     if (e.which === 82) {
         redColor();
-        }
     }
-);$(window).keydown(function (e) {
+});
+$(window).keydown(function (e) {
     if (e.which === 66) {
         blueColor();
-        }
     }
-);$(window).keydown(function (e) {
+});
+$(window).keydown(function (e) {
     if (e.which === 89) {
         yellowColor();
-        }
     }
-);$(window).keydown(function (e) {
+});
+$(window).keydown(function (e) {
     if (e.which === 79) {
         orangeColor();
-        }
     }
-);
+});
